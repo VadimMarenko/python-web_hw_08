@@ -6,8 +6,6 @@ import connect
 
 json_files = ["authors.json", "quotes.json"]
 
-# connect
-
 
 def json_reader(file):
     try:
