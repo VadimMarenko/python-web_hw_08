@@ -1,8 +1,8 @@
 import json
 from pprint import pprint
 
-from models import Authors, Quotes
-import connect
+from part_one.models import Authors, Quotes
+import part_one.connect as connect
 
 json_files = ["authors.json", "quotes.json"]
 

@@ -1,9 +1,10 @@
-from mongoengine import connect
 import configparser
+import pathlib
+from mongoengine import connect
 
-
+file_config = pathlib.Path(__file__).parent.parent.parent.joinpath("config.ini")
 config = configparser.ConfigParser()
-config.read("config.ini")
+config.read(file_config)
 
 mongo_user = config.get("DB", "user")
 mongodb_pass = config.get("DB", "pass")

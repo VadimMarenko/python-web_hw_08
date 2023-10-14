@@ -11,6 +11,8 @@ packages = [{include = "python_web_hw_08"}]
 python = "^3.11"
 mongoengine = "^0.27.0"
 pika = "^1.3.2"
+redis = "^5.0.1"
+redis-lru = "^0.1.2"
 
 
 [build-system]
