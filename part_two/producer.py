@@ -3,10 +3,10 @@ import pika
 import connect
 from contacts_models import Contacts
 
-Contacts.objects().delete()
-
-fake = faker.Faker("uk_UA")
+fake = faker.Faker()
 number_of_contacts = 25
+
+Contacts.objects().delete()
 
 for _ in range(number_of_contacts):
     contact = Contacts(
