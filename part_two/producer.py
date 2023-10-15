@@ -1,4 +1,21 @@
+import faker
 import pika
+import connect
+from contacts_models import Contacts
+
+Contacts.objects().delete()
+
+fake = faker.Faker("uk_UA")
+number_of_contacts = 25
+
+for _ in range(number_of_contacts):
+    contact = Contacts(
+        fullname=fake.name(),
+        email=fake.email(),
+        phone_number=fake.phone_number(),
+        delivery=False,
+    )
+    contact.save()
 
 credentials = pika.PlainCredentials("guest", "guest")
 connection = pika.BlockingConnection(
